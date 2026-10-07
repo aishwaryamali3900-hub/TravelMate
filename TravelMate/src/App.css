@@ -1,0 +1,320 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background-color: #1e3a5f;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home-page {
+  text-align: center;
+}
+
+.hero {
+  padding: 80px 20px;
+  background-color: #dceeff;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.home-content {
+  padding: 40px 20px;
+}
+
+
+/* =========================
+   DESTINATIONS
+========================= */
+
+.destinations-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.destinations-page h1 {
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #1e3a5f;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.destination-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+}
+
+.destination-card h2 {
+  color: #1e3a5f;
+  margin-top: 0;
+}
+
+.destination-card p {
+  line-height: 1.6;
+}
+
+.destination-card strong {
+  color: #1e3a5f;
+}
+
+
+/* =========================
+   PLAN TRIP
+========================= */
+
+.plan-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.plan-page h1 {
+  text-align: center;
+  color: #1e3a5f;
+  margin-bottom: 30px;
+}
+
+
+/* Form */
+
+.trip-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Labels */
+
+.trip-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+
+/* Inputs and Selects */
+
+.trip-form input,
+.trip-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: white;
+}
+
+
+/* Focus */
+
+.trip-form input:focus,
+.trip-form select:focus {
+  outline: none;
+  border-color: #1e3a5f;
+}
+
+
+/* Button */
+
+.trip-form button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 13px;
+  background-color: #1e3a5f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.trip-form button:hover {
+  background-color: #142942;
+}
+
+
+/* =========================
+   LIVE TRIP DETAILS
+========================= */
+
+.trip-result {
+  background-color: white;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.trip-result h2 {
+  color: #1e3a5f;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.trip-result p {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  line-height: 1.5;
+}
+
+.trip-result p:last-child {
+  border-bottom: none;
+}
+
+.trip-result strong {
+  color: #1e3a5f;
+}
+
+
+/* =========================
+   MY TRIPS
+========================= */
+
+.trips-page {
+  padding: 40px;
+  text-align: center;
+}
+
+.trips-page h1 {
+  color: #1e3a5f;
+}
+
+.trips-button {
+  padding: 12px 25px;
+  background-color: #1e3a5f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.trips-table-wrapper {
+  overflow-x: auto;
+}
+
+.trips-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.trips-table th,
+.trips-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.trips-table th {
+  background-color: #1e3a5f;
+  color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destinations-page {
+    padding: 25px 15px;
+  }
+
+  .plan-page {
+    padding: 20px 15px;
+  }
+
+  .trip-form {
+    padding: 20px;
+  }
+}
